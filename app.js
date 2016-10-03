@@ -1,6 +1,7 @@
 const http = require('http');
 const express = require('express');
 const nconf = require('nconf');
+const mongoose = require('mongoose');
 const debug = require('debug')('server:app');
 
 const app = express();
@@ -15,10 +16,18 @@ nconf
 
 app.use(express.static('public'));
 
+const db_url = nconf.get('DB_URL');
 const webOptions = {
   port: nconf.get('WEB_PORT'),
   host: nconf.get('WEB_HOST')
 };
+
+mongoose.connect(db_url);
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'mongodb connection error:'));
+db.once('open', () => {
+  debug(`established mongoDB connection to ${db_url}`);
+});
 
 server.listen(webOptions, () => {
   debug(`Server listening on: ${webOptions.port}`);
