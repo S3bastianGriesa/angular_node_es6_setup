@@ -3,6 +3,7 @@ const express = require('express');
 const nconf = require('nconf');
 const mongoose = require('mongoose');
 const debug = require('debug')('server:app');
+const appModule = require('app');
 
 const app = express();
 const server = http.createServer(app);
@@ -15,6 +16,8 @@ nconf
   });
 
 app.use(express.static('public'));
+
+app.use(appModule.router);
 
 const db_url = nconf.get('DB_URL');
 const webOptions = {
