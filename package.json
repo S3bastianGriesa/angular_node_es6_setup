@@ -1,11 +1,11 @@
 {
-  "name": "node angular es6 basesetup",
+  "name": "node_angular_es6_setup",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp build && node app.js"
+    "start": "gulp build && DEBUG=server* node app.js"
   },
   "author": "Sebastian Griesa",
   "license": "ISC",
@@ -16,5 +16,10 @@
     "gulp-concat": "^2.6.0",
     "gulp-install": "^0.6.0",
     "gulp-watch": "^4.3.10"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "express": "^4.14.0",
+    "nconf": "^0.8.4"
   }
 }
