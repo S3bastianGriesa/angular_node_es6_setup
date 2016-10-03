@@ -8,7 +8,7 @@
     "start": "gulp build && DEBUG=server* node app.js"
   },
   "author": "Sebastian Griesa",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015": "^6.16.0",
     "gulp": "^3.9.1",

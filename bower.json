@@ -5,7 +5,7 @@
   "authors": [
     "Sebastian Griesa"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/S3bastianGriesa/angular_node_es6_setup",
   "ignore": [
     "**/.*",
