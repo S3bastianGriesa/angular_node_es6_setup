@@ -5,7 +5,7 @@ angular.module('app', ['ngResource', 'ngRoute', 'ui.bootstrap', 'ngAnimate'])
     '$routeProvider', ($routeProvider) => {
       $routeProvider.when('/', {
         templateUrl: './js/directives/startsite/template.html',
-        controller: 'startsiteCtrl'
-      })
-    }
+        controller: 'startsiteCtrl',
+      });
+    },
   ]);
