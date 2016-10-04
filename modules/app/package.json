@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "initial appmodule",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Griesa",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^4.4.10",
+    "debug": "^2.2.0",
+    "express": "^4.13.4"
+  }
+}

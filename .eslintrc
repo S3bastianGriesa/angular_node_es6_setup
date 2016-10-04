@@ -1,0 +1,6 @@
+{
+  "extends": "5minds",
+  "globals": {
+    "angular": true
+  }
+}
